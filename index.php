@@ -1,4 +1,5 @@
 <?php 
+require_once("PriceController.php");
 require_once('routes.php');
 // $url = $_SERVER['REQUEST_URI'];
 // echo  $_SERVER['REQUEST_URI'];

@@ -11,9 +11,20 @@ class Router{
         $params = self::getMatches($pattern);
         if($params){
             self::$nomatch =false;
+            $functionArguments =array_slice($params,1);
             if (is_callable($callback)) {
-                $functionArguments =array_slice($params,1);
-                $callback(...$functionArguments);
+           
+                // if (is_array($callback)) {
+                //    $className = $callback[0];
+                //    $functionName = $callback[1];
+                //     $instance = $className::getInstance();
+                //     $instance->$functionName($functionArguments);
+                // }else{
+                    var_dump($functionArguments);
+                    print_r( $callback(...$functionArguments));
+                    $callback(...$functionArguments);
+                // }
+                
             }
         }
     }
