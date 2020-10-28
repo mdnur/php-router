@@ -13,4 +13,8 @@ Router::post("/post",function (){
     echo("From post");
 });
 
+Router::delete("/delete",function (){
+    echo "this is a delete request\n";
+});
+
 Router::cleanup();

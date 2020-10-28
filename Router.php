@@ -37,7 +37,12 @@ class Router{
         self::process($pattern,$callback);
     }
 
-
+    public static function delete($pattern,$callback){
+        if ($_SERVER['REQUEST_METHOD'] != 'DELETE') {
+            return;
+        }
+        self::process($pattern,$callback);
+    }
     
 
     public static function cleanup(){
