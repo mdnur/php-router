@@ -9,5 +9,8 @@ Router::get("/user/(\w+)/",function ($username){
     echo("Welcome {$username}");
 });
 
+Router::post("/post",function (){
+    echo("From post");
+});
 
 Router::cleanup();

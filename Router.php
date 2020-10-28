@@ -30,6 +30,14 @@ class Router{
         }
         self::process($pattern,$callback);
     }
+    public static function post($pattern,$callback){
+        if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+            return;
+        }
+        self::process($pattern,$callback);
+    }
+
+
     
 
     public static function cleanup(){
