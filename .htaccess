@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteEngine %{SCRIPT_FILENAE} !-f
+RewriteEngine %{SCRIPT_FILENAE} !-d
+RewriteEngine %{SCRIPT_FILENAE} !-l
+RewriteRule ^(.*)$ index.php/$1
