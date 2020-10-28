@@ -16,5 +16,8 @@ Router::post("/post",function (){
 Router::delete("/delete",function (){
     echo "this is a delete request\n";
 });
+Router::put("/put",function (){
+    echo "this is a PUT request\n";
+});
 
 Router::cleanup();

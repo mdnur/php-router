@@ -43,6 +43,13 @@ class Router{
         }
         self::process($pattern,$callback);
     }
+
+    public static function put($pattern,$callback){
+        if ($_SERVER['REQUEST_METHOD'] != 'PUT') {
+            return;
+        }
+        self::process($pattern,$callback);
+    }
     
 
     public static function cleanup(){
